@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="src/css/style.css">
+    <title>Ranking de Vendas</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h1>Ranking de Vendas</h1>
+        <p>Atualizado em: <span id="update-time"></span></p>
+    </div>
+    
+    <div class="podium">
+        <!-- Posições 1, 2 e 3 serão preenchidas por JavaScript -->
+        <div class="position" id="position-1">
+            <div class="position-1">
+                <div class="position-content">
+                    <div class="position-number">1</div>
+                    <img class="photo" id="photo-1" src="" alt="1º lugar">
+                    <div class="name" id="name-1"></div>
+                    <div class="score" id="score-1"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="position" id="position-2">
+            <div class="position-2">
+                <div class="position-content">
+                    <div class="position-number">2</div>
+                    <img class="photo" id="photo-2" src="" alt="2º lugar">
+                    <div class="name" id="name-2"></div>
+                    <div class="score" id="score-2"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="position" id="position-3">
+            <div class="position-3">
+                <div class="position-content">
+                    <div class="position-number">3</div>
+                    <img class="photo" id="photo-3" src="" alt="3º lugar">
+                    <div class="name" id="name-3"></div>
+                    <div class="score" id="score-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="other-positions" id="other-positions">
+        <!-- Outras posições serão preenchidas por JavaScript -->
+    </div>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+</html>
