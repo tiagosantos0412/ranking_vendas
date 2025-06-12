@@ -1,5 +1,5 @@
 // Configurações
-const UPDATE_INTERVAL = 30000; // 30 segundos
+const UPDATE_INTERVAL = 10000; // 10 segundos
 const PHOTOS_BASE_URL = 'src/fotos/';
 const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1VRGKiAprqok8cCch0SslrDHRimgdFqutbQRvZTyBKto/gviz/tq?tqx=out:json&sheet=Ranking';
 
@@ -34,7 +34,7 @@ function updatePodium(data) {
         if (data[i]) {
             const position = i + 1;
             document.getElementById(`name-${position}`).textContent = data[i]['CONSULTOR'];
-            document.getElementById(`score-${position}`).textContent = `${data[i]['TOTAL VENDIDO']} vendidos`;
+            document.getElementById(`score-${position}`).textContent = `R$ ${data[i]['TOTAL VENDIDO'].toFixed(2)} vendidos`;
             const img = document.getElementById(`photo-${position}`);
             img.onerror = () => img.src = 'src/fotos/default.png';
             img.src = `${PHOTOS_BASE_URL}${data[i]['CONSULTOR'].replace(/\s/g, '_')}.png`;
@@ -46,7 +46,7 @@ function updateOtherPositions(data) {
     const container = document.getElementById('other-positions');
     container.innerHTML = '';
 
-    for (let i = 3; i < data.length && i < 9; i++) {
+    for (let i = 3; i < data.length; i++) {
         const position = i + 1;
         const person = data[i];
 
@@ -56,7 +56,7 @@ function updateOtherPositions(data) {
             <div class="position-number">${position}</div>
             <img class="other-photo" onerror="this.src='src/fotos/default.png'" src="${PHOTOS_BASE_URL}${person['CONSULTOR'].replace(/\s/g, '_')}.png" alt="${position}º lugar">
             <div class="other-name">${person['CONSULTOR']}</div>
-            <div class="other-score">${person['TOTAL VENDIDO']} vendidos</div>
+            <div class="other-score">R$ ${person['TOTAL VENDIDO'].toFixed(2)} vendidos</div>
         `;
 
         container.appendChild(div);

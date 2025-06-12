@@ -73,8 +73,9 @@ body {
 }
 
 .score {
+    padding: 10px;
     font-size: 0.9rem;
-    color: #7f8c8d;
+    color: #00000096;
     font-weight: 500;
 }
 
@@ -108,7 +109,7 @@ body {
 
 .position-1 {
     height: 380px;
-    width: 180px;
+    width: 200px;
     background: linear-gradient(to bottom, #f1c40f, #f39c12);
     border-radius: 10px 10px 0 0;
     padding-top: 30px;
@@ -116,15 +117,15 @@ body {
 
 .position-2 {
     height: 320px;
-    width: 160px;
+    width: 200px;
     background: linear-gradient(to bottom, #bdc3c7, #95a5a6);
     border-radius: 10px 10px 0 0;
     padding-top: 30px;
 }
 
 .position-3 {
-    height: 280px;
-    width: 160px;
+    height: 260px;
+    width: 200px;
     background: linear-gradient(to bottom, #e67e22, #d35400);
     border-radius: 10px 10px 0 0;
     padding-top: 30px;
